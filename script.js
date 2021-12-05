@@ -11,8 +11,7 @@ const checkUsername = () => {
     let valid = false;
 
     const min = 3,
-        max = 25;
-
+          max = 25;
     const username = usernameEl.value.trim();
 
     if (!isRequired(username)) {
@@ -43,8 +42,6 @@ const checkEmail = () => {
 
 const checkPassword = () => {
     let valid = false;
-
-
     const password = passwordEl.value.trim();
 
     if (!isRequired(password)) {
@@ -72,7 +69,6 @@ const checkConfirmPassword = () => {
         showSuccess(confirmPasswordEl);
         valid = true;
     }
-
     return valid;
 };
 
@@ -88,7 +84,6 @@ const isPasswordSecure = (password) => {
 
 const isRequired = value => value === '' ? false : true;
 const isBetween = (length, min, max) => length < min || length > max ? false : true;
-
 
 const showError = (input, message) => {
     const formField = input.parentElement;
